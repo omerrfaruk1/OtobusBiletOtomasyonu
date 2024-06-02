@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98EDD42E-8BAD-488A-A40F-2982D7E17DC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>obisyon2</RootNamespace>
+    <AssemblyName>obisyon2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="app.Designer.cs">
+      <DependentUpon>app.cs</DependentUpon>
+    </Compile>
+    <Compile Include="businfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="businfos.Designer.cs">
+      <DependentUpon>businfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="buyTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="buyTicket.Designer.cs">
+      <DependentUpon>buyTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DateAndDirectionClass.cs" />
+    <Compile Include="direction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="direction.Designer.cs">
+      <DependentUpon>direction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obisyondbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>obisyondbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages.Designer.cs">
+      <DependentUpon>pages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="app.resx">
+      <DependentUpon>app.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="businfos.resx">
+      <DependentUpon>businfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="buyTicket.resx">
+      <DependentUpon>buyTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="direction.resx">
+      <DependentUpon>direction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages.resx">
+      <DependentUpon>pages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="obisyondbDataSet.xsc">
+      <DependentUpon>obisyondbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="obisyondbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>obisyondbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="obisyondbDataSet.xss">
+      <DependentUpon>obisyondbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\starbatman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mardinseyhat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sec.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\martur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obisyondb.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\guneyakdeniz.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
